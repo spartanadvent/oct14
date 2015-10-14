@@ -1,4 +1,4 @@
-var github_token = //github token;
+var github_token ;
 
 var github_connection;
 var repo;
@@ -8,7 +8,8 @@ var current_element;
 
 function repos(repo_in_use){
     
-  return  repo = github_connection.getRepo('spartanadvent', repo_in_use);
+    return  repo = github_connection.getRepo('spartanadvent', repo_in_use);
+    github_connection.content('spartanadvent', repo_in_use);
     
 }
 
