@@ -1,16 +1,16 @@
-var github_token ;
-
+var github_token = '48f9b090441283034c38eb176cad6832be7e5ca1';
 var github_connection;
 var repo;
-
 var current_element;
+var user_gists;
+//bota to encode
+//atob to decode
 
+function repos(user_name, repo_in_use) {
 
-function repos(user_name,repo_in_use){
-    
-    return repo = github_connection.getRepo(user_name, repo_in_use);
-
+     repo = github_connection.getRepo(user_name, repo_in_use);
 }
+
 
 
 
@@ -70,10 +70,7 @@ document.addEventListener('readystatechange',function(event){
               auth: "oauth"
             });
 
-        create_element('div');
-       
-        log(current_element);
-       
+
     }
     
 
