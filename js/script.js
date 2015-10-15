@@ -1,4 +1,4 @@
-var github_token = //github token;
+var github_token ;
 
 var github_connection;
 var repo;
@@ -6,15 +6,18 @@ var repo;
 var current_element;
 
 
-function repos(repo_in_use){
+function repos(user_name,repo_in_use){
     
-  return  repo = github_connection.getRepo('spartanadvent', repo_in_use);
-    
+    return repo = github_connection.getRepo(user_name, repo_in_use);
+
 }
 
 
+
+
 function create_element(element_name) {
-  current_element = document.createElement(document.appendChild(element_name));
+    current_element = document.createElement(element_name)
+        document.body.appendChild(current_element);
 
 }
 
@@ -53,8 +56,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
     });
 
-  create_element('div');
-  log(current_element);
+ 
 
 });
 
@@ -67,8 +69,14 @@ document.addEventListener('readystatechange',function(event){
               token: github_token,
               auth: "oauth"
             });
-    
-    
+
+        create_element('div');
+       
+        log(current_element);
+       
     }
     
+
+
+
 });
