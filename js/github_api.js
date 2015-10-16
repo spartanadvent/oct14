@@ -813,6 +813,7 @@
       this.isStarred = function(cb) {
         _request("GET", gistPath+"/star", null, function(err,res) {
           cb(err,res);
+          cb(err,res);
         });
       };
     };

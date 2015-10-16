@@ -1,4 +1,4 @@
-var github_token = '48f9b090441283034c38eb176cad6832be7e5ca1';
+var github_token = '6635046a910898574e4ab191c0fde105db46e825';
 var github_connection;
 var repo;
 var current_element;
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
+call_back = function(event){console.log(event)};
 
 document.addEventListener('readystatechange',function(event){
     
@@ -68,10 +69,11 @@ document.addEventListener('readystatechange',function(event){
         github_connection = new Github({ 
               token: github_token,
               auth: "oauth"
-            });
+            }),call_back();
+        
 
 
-    }
+    };
     
 
 
